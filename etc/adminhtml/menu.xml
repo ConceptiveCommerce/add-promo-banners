@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Conceptive_Banners::banner" title="Banners" translate="title" module="Conceptive_Banners" sortOrder="80" parent="Magento_Backend::marketing" resource="Conceptive_Banners::banner"/>
+        <add id="Conceptive_Banners::banners" title="Promotional Banners" module="Conceptive_Banners" sortOrder="50"  action="banners/index/index" resource="Conceptive_Banners::banners" parent="Conceptive_Banners::banner"/>
+        <!-- <add id="Conceptive_Banners::grid" title="Summary Grid" module="Conceptive_Banners" sortOrder="60"  action="banners/grid/index" resource="Conceptive_Banners::grid" parent="Conceptive_Banners::view"/> -->
+    </menu>
+</config>

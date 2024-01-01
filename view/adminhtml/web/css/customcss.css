@@ -1,0 +1,30 @@
+.lrw-daterangepicker.daterangepicker.ltr.opensright.show-calendar {
+    display: flex;
+    margin-top: 5px;
+    padding: 23px 20px;
+    border: 1px solid #adadad;
+    box-shadow: 1px 1px 5px rgb(0 0 0 / 50%);
+    gap: 0 10px;
+}
+
+input.input-mini.form-control {
+    margin: 0 0 5px 0;
+}
+
+.daterangepicker .input-mini.active {
+    border: 1px solid #08c;
+}
+
+.daterangepicker td.week,
+.daterangepicker th.week {
+    font-size: 80%;
+    color: #ccc;
+}
+
+.lrw-daterangepicker.daterangepicker.ltr.opensright {
+    display: none;
+}
+
+.admin__field.field.field-show_order_statuses.with-note {
+    display: none;
+}

@@ -1,0 +1,55 @@
+<?php
+
+$banners = $block->getFrontBanners();
+
+?>
+
+<?php foreach ($banners as $index => $banner) {
+	$bannerId = $banner->getBannersId();
+
+	$bannerStartDate = $banner->getStartDate();
+	$bannerExpireDate = $banner->getEndDate();
+
+	$todayDate = $block->getTodayDate()->gmtDate();
+
+	if (($bannerStartDate != null) && ($bannerExpireDate != null)) {
+		if (($bannerStartDate < $todayDate) && ($bannerExpireDate > $todayDate)) {
+
+			$bannerPos = explode(",", $banner->getPosition());
+
+?>
+
+			<?php if (in_array("Product Page(Top)", $bannerPos)) {  ?>
+				<a href="<?php echo $banner->getLink(); ?>" target="_blank">
+					<img src="<?php echo $block->getMediaDirectoryUrl() . $banner->getBannerimage() ?>" class="banner" data-arg1="<?= $bannerId ?>" />
+				</a>
+			<?php
+			} ?>
+
+<?php  }
+	}
+}
+?>
+
+<script>
+	btns = document.getElementsByClassName("banner");
+	for (var i = 0; i < btns.length; i++) {
+		btns[i].addEventListener("click", function(event) {
+			let arg1 = event.target.getAttribute('data-arg1');
+			var url = "<?php echo $block->getBaseUrl() . 'conceptive/index/index' ?>";
+			jQuery.ajax({
+				url: url,
+				type: "POST",
+				data: {
+					bannerId: arg1
+				},
+				showLoader: false,
+				cache: false,
+				success: function(response) {
+					console.log("successfully");
+				}
+			});
+			return false;
+		});
+	}
+</script>

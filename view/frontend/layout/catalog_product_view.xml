@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="content">
+            <block template="Conceptive_Banners::bannersProdPageTop.phtml"  before="-" class="Conceptive\Banners\Block\Banners" name="banners.prod.top" />
+            <block template="Conceptive_Banners::bannersProdPageBottom.phtml" after="-" class="Conceptive\Banners\Block\Banners" name="banners.prod.bottom" />
+        </referenceContainer>
+    </body>
+</page>

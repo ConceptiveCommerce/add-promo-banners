@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <css src="jquery/fileUploader/css/jquery.fileupload-ui.css"/>
+        <link src="jquery/fileUploader/bootstrap.js"/>
+        <link src="Conceptive_Banners::js/custom.js"/>
+        <css src="Conceptive_Banners::css/custom.css"/>
+        <css src="Conceptive_Banners::css/jquery.minicolors.css"/>
+        <css src="Conceptive_Banners::css/menu.css"/>
+    </head>
+    <update handle="editor"/>
+    <body>
+        <referenceContainer name="content">
+            <uiComponent name="banners_index_form"/>
+            <block class="Magento\Framework\View\Element\Template" name="customtext" template="Conceptive_Banners::customcss.phtml" />
+            <block class="Conceptive\Banners\Block\Adminhtml\Advancedreport\Filter\Form\Order" name="grid.filter.form.custom" />
+            <block class="Conceptive\Banners\Block\Adminhtml\Grid\Grid" name="grid_grid_listing_edit"/>
+        </referenceContainer>
+    </body>
+</page>

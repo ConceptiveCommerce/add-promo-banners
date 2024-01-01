@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+   <table name="conceptive_banners" resource="default" engine="innodb" comment="Conceptive Banners">
+      <column xsi:type="smallint" name="banners_id" padding="20" unsigned="false" nullable="false" identity="true" comment="Banner ID" />
+      <column xsi:type="varchar" name="title" nullable="true" length="200" comment="Title" />
+      <column xsi:type="varchar" name="bannerimage" nullable="true" length="255" comment="Banner Image" />
+      <column xsi:type="varchar" name="link" nullable="true" length="255" comment="Link" />
+      <column xsi:type="smallint" name="status" nullable="false" default="1" comment="Status" />
+      <column xsi:type="datetime" name="created_time" nullable="true" default="CURRENT_TIMESTAMP" comment="Creation Time" />
+      <column xsi:type="datetime" name="update_time" nullable="true" default="CURRENT_TIMESTAMP" comment="Update Time" />
+      <column xsi:type="varchar" name="position" nullable="true" length="255" comment="Banner Positon" />
+      <column xsi:type="datetime" name="start_date" nullable="true" default="CURRENT_TIMESTAMP" comment="Start Date" />
+      <column xsi:type="datetime" name="end_date" nullable="true" default="CURRENT_TIMESTAMP" comment="End Date" />
+      <constraint xsi:type="primary" referenceId="PRIMARY">
+         <column name="banners_id" />
+      </constraint>
+   </table>
+   <table name="banner_summery" resource="default" engine="innodb" comment="Conceptive Banners">
+      <column xsi:type="smallint" name="summery_id" padding="20" unsigned="false" nullable="false" identity="true" comment="Summery ID" />
+      <column xsi:type="smallint" name="banner_id" nullable="true" comment="Banner ID" />
+      <column xsi:type="varchar" name="link_click_count" nullable="true" length="20" comment="Click Count" />
+      <column xsi:type="varchar" name="user_name" nullable="true" length="255" default="" comment="User Name" />
+      <column xsi:type="varchar" name="email" nullable="true" length="255" default="" comment="Email" />
+      <column xsi:type="varchar" name="contact" nullable="true" length="255" default="" comment="Contact" />
+      <column xsi:type="date" name="banner_click_time" nullable="true" comment="Banner Click Time" />
+      <column xsi:type="varchar" name="visitor_ip" nullable="true" length="255" default="" comment="Visitor IP" />
+      <constraint xsi:type="primary" referenceId="PRIMARY">
+         <column name="summery_id" />
+      </constraint>
+   </table>
+</schema>

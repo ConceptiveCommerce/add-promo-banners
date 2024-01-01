@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="columns.top">
+            <block template="Conceptive_Banners::bannersCatPageTop.phtml"  class="Conceptive\Banners\Block\Banners" name="banners.cat.top" />
+        </referenceContainer>
+        <referenceContainer name="content">
+            <block template="Conceptive_Banners::bannersCatPageBottom.phtml" after="-" class="Conceptive\Banners\Block\Banners" name="banners.cat.bottom" />
+        </referenceContainer>
+        <referenceBlock name="sidebar.main">
+            <block template="Conceptive_Banners::bannersSidebarMain.phtml" class="Conceptive\Banners\Block\Banners" name="banners.cat" />
+        </referenceBlock>
+    </body>
+</page>

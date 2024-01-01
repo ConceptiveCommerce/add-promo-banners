@@ -1,0 +1,102 @@
+<?php
+$objectManager = \Magento\Framework\App\ObjectManager::getInstance();
+$request = $objectManager->get('Magento\Framework\App\Request\Http');
+$controlname = $request->getRouteName();
+if ($controlname == "banners" && $request->getParam('banners_id') != null) { ?>
+    <script>
+        require(['jquery'], function() {
+            jQuery(document).ready(function() {
+                jQuery(".banners-index-edit button#reset").addClass("rmreset");
+
+            });
+        });
+    </script>
+<?php } ?>
+<style>
+    .banners-index-edit button#reset.rmreset {
+        display: none;
+    }
+
+    .lrw-daterangepicker.daterangepicker.ltr.opensright.show-calendar {
+        display: flex;
+        margin-top: 5px;
+        padding: 23px 20px;
+        border: 1px solid #adadad;
+        box-shadow: 1px 1px 5px rgb(0 0 0 / 50%);
+        gap: 0 10px;
+    }
+
+    input.input-mini.form-control {
+        margin: 0 0 5px 0;
+    }
+
+    .daterangepicker .input-mini.active {
+        border: 1px solid #08c;
+    }
+
+    .daterangepicker td.week,
+    .daterangepicker th.week {
+        font-size: 80%;
+        color: #ccc;
+    }
+
+    .lrw-daterangepicker.daterangepicker.ltr.opensright {
+        display: none;
+    }
+
+    .admin__field.field.field-show_order_statuses.with-note {
+        display: none;
+    }
+
+    .lrw-daterangepicker.daterangepicker.ltr.opensright {
+        min-width: 824px;
+    }
+
+    .ranges,
+    .calendar {
+        float: left !important;
+    }
+
+    fieldset#order_report_base_fieldset {
+        position: relative;
+    }
+
+    .admin__field.field.field-showreport.no-label {
+        position: absolute;
+        left: 49%;
+        top: 36%;
+    }
+
+    input#order_report_showreport {
+        padding: 8px 22px;
+        background: #514943;
+        color: white;
+        font-weight: 600;
+        margin: 0 30px;
+    }
+
+    .banners-index-edit .ui-datepicker .ui-datepicker-buttonpane button,
+    .ui-datepicker .ui-datepicker-buttonpane .block-footer .action-add {
+        width: 48%;
+    }
+</style>
+<script>
+    require(['jquery'], function() {
+        jQuery(document).ready(function() {
+            jQuery("#reportrange > span").text("date");
+            jQuery('#order_report_showreport').click(function() {
+                // alert("Hello");
+                var date = jQuery("#reportrange > span").text();
+                var currentUrl = window.location.href;
+                var url = new URL(currentUrl);
+                url.searchParams.set("daterange", date); // setting your param
+                var newUrl = url.href;
+                //alert(data);
+                window.location.href = newUrl;
+
+                // location.reload();
+            });
+
+        });
+    });
+</script>

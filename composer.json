@@ -1,0 +1,27 @@
+{
+    "name": "conceptive/banners",
+    "description": "Magento 2 Add Promotional Banners",
+    "type": "magento2-module",
+    "version": "1.0.2",
+    "license": [
+        "OSL-3.0",
+        "AFL-3.0"
+    ],
+    "require": {
+        "php": "~7.4.0||~8.1.0"
+    },
+    "authors": [
+        {
+            "name": "Bharat Mali",
+            "email": "bharat.conceptivecommerce@gmail.com",
+            "homepage": "https://conceptivecommerce.com",
+            "role": "Leader"
+        }
+    ],
+    "autoload": {
+        "files": [ "registration.php" ],
+        "psr-4": {
+            "Conceptive\\Banners\\": ""
+        }
+    }
+}

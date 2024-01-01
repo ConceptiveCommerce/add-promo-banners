@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<!--
+
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        
+        <!-- <update id="Conceptive_Extensions::conceptiveextensions" title="Conceptive Extensions" module="Magento_Backend" sortOrder="300" resource="Conceptive_Extensions::conceptiveextensions"/> -->
+        <!-- <add id="Conceptive_Banners::banners" title="Banners" module="Conceptive_Banners" sortOrder="50" parent="Conceptive_Extensions::conceptiveextensions" action="banners/index/index" resource="Conceptive_Banners::banners"/> -->
+        <add id="Conceptive_Banners::banners" title="Promotional Banners" module="Conceptive_Banners" sortOrder="50"  action="banners/index/index" resource="Conceptive_Banners::banners"/>
+       <!-- <add id="Conceptive_Banners::summery" title="Banners" module="Conceptive_Banners" sortOrder="50" parent="Conceptive_Banners::banners" action="banners/index/summery" resource="Conceptive_Banners::summery"/>-->
+        
+    </menu>
+</config>
